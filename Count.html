@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       body{
+           background-color:rgb(87, 189, 163);
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+           position: absolute;
+           text-align: center;
+       }
+       .container{
+           display: flex;
+           align-items: center;
+           height: 100%;
+           padding: 100px;
+       }
+       #root{
+       margin: 0 50px;
+       font-size: 50px;
+       }
+       button{
+           width: 100px;
+           height: 70px;
+           outline: none;
+           font-size: 25px;
+           border-style: none;
+           box-shadow: 8px 8px 20px;
+       }
+       button:hover{
+           
+           color: blueviolet;
+       }
+    </style>    
+</head>
+<body>
+    <div id="main">
+        <h2 id="root"></h2>
+    <div class="container">
+        <button  onclick="dec()" style="background-color: rgb(124, 86, 214);color:white;">-</button>
+    <button onclick="reset()" style="background-color:  rgb(235, 95, 228);color:black;">ZERO</button>
+         <button  onclick="inc()" style="background-color: rgba(182, 68, 74, 0.836);color:rgb(247, 241, 241);">+</button>
+    </div>    
+</div>
+
+    <script>
+        var data=0
+        document.getElementById("root").innerText=data
+
+        function dec(){
+             data=data-1
+              document.getElementById("root").innerText=data
+        }
+        function inc(){
+            data=data+1
+            document.getElementById("root").innerText=data
+        }
+        function reset(){
+            data=0
+            document.getElementById("root").innerText=data
+        }
+    </script>
+</body>
+</html>
